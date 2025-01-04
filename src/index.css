@@ -1,0 +1,61 @@
+@font-face {
+  font-family: 'Duplicate Sans';
+  src:
+    url('./assets/fonts/DuplicateSans.woff2') format('woff2'),
+    url('./assets/fonts/DuplicateSans.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Duplicate Sans', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 0.2rem;
+}
+
+::-webkit-scrollbar-track {
+  background: '#f1f1f1';
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(191, 187, 187);
+  border-radius: 1rem;
+}
+
+.anime {
+  animation: scaleAnimation 2s infinite alternate;
+}
+
+@keyframes scaleAnimation {
+  from {
+    transform: scale(0.4);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.arrow-container {
+  position: relative;
+  width: 80px;
+  height: 24px;
+  overflow: hidden;
+  margin-block-start: 0.6rem;
+}
+
+.arrow {
+  position: absolute;
+  width: 200%; 
+  animation: moveArrow 1.5s linear infinite;
+}
+
+@keyframes moveArrow {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

@@ -1,32 +1,13 @@
+import config from './config';
+
 const routes = {
   main: {
-    dashboard: '/app',
-
-    swap: '/swap',
-    confirmingSwap: '/confirming-swap',
-    transferSuccess: '/transfer-success',
-
-    withdrawal: '/withdrawal',
-    withdrawalSuccess: '/withdrawal-success',
-
-    send: '/send',
-    sendSummary: '/send-summary',
-    sendConfirmationSuccess: '/send-confirmation-success',
-
-    receive: '/receive',
-
-    tokenDetail: '/token-detail',
-    individualCryptoDetails: '/individual-crypto-details',
+    dashboard: `${config.appUrl}`,
   },
   auth: {
-    signIn: '/sign-in',
-    signUp: '/sign-up',
-    verifyAccount: '/verify-account',
-    resetPassword: '/reset-password',
-    confirmResetPassword: '/confirm-reset-password',
-    resetPasswordSuccessful: '/reset-password-successful',
+    signIn: `${config.appUrl}/sign-in`,
+    signUp: `${config.appUrl}/sign-up`,
   },
-  settings: '/settings',
 };
 
 export default routes;

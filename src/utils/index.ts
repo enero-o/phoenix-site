@@ -37,15 +37,6 @@ export const formatLargeNumber = (number: number) => {
   }
 };
 
-export function info(currency = 'BTC') {
-  return [
-    { id: 1, title: 'Send', icon: images.sendIcon, to: `${routes.main.send}?currency=${currency}` },
-    { id: 2, title: 'Receive', icon: images.receiveIcon, to: `${routes.main.receive}?currency=${currency}` },
-    { id: 3, title: 'Swap', icon: images.tDesignSwapVert, to: `${routes.main.swap}?currency=${currency}` },
-    // { id: 4, title: 'Withdraw', icon: images.withdrawalIcon, to: routes.main.withdrawal },
-  ];
-}
-
 export const replaceUnderscoreWithSpace = (str: string): string => {
   return str.replace(/_/g, ' ');
 };

@@ -1,10 +1,8 @@
 import { type FC } from 'react';
 
 import { Stack, Table, TableContainer, Tbody, Th, Thead, Tr } from '@chakra-ui/react';
-import { useNavigate } from 'react-router-dom';
 
 import useTokenIcon from '@phx/hooks/useTokenIcon';
-import routes from '@phx/routes';
 import { currencyFormatter } from '@phx/utils';
 
 import CustomNameTd from './customNameTd';
@@ -15,13 +13,7 @@ interface ComponentProp {
 }
 
 const WalletTable: FC<ComponentProp> = ({ data }) => {
-  const navigate = useNavigate();
-
   const tokenIcon = useTokenIcon();
-
-  const handleNavigation = (id: string) => {
-    navigate(`${routes.main.tokenDetail}?id=${id}`);
-  };
 
   return (
     <Stack spacing="6">
@@ -42,7 +34,7 @@ const WalletTable: FC<ComponentProp> = ({ data }) => {
               const rate = currencyFormatter.format(parseFloat(item?.rate));
 
               return (
-                <Tr key={item?.accountId} cursor="pointer" onClick={() => handleNavigation(item.accountId)}>
+                <Tr key={item?.accountId} cursor="pointer">
                   <CustomNameTd icon={tokenIcon(item?.currency)} short={item?.currency} />
 
                   <TdCustom>{rate}</TdCustom>

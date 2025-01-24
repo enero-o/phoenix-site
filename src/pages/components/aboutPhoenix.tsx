@@ -80,7 +80,7 @@ const AboutPhoenix = () => {
               <br />
             </Box>
             <Button rightIcon={<Image src={images.swap} />} alignSelf={{ md: 'flex-start' }}>
-              Swap Now
+              Get Wallet
             </Button>
           </Stack>
         </Flex>

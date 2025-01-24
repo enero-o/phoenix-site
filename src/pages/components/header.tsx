@@ -1,26 +1,17 @@
 import type { FC } from 'react';
 
-import { Box, Button, Card, Divider, Flex, HStack, Image, Stack, Text } from '@chakra-ui/react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Box, Button, Flex, HStack, Image, Text } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 
-import Logo from '@phx/components/logo';
 import images from '@phx/images';
 import routes from '@phx/routes';
-
-import TokenInfo from './tokenInfo';
 
 interface ComponentProp {
   // eslint-disable-next-line no-undef
   tokenData: Token[];
 }
 
-const Header: FC<ComponentProp> = ({ tokenData }) => {
-  const navigate = useNavigate();
-
-  const handleNavigation = (route: string) => {
-    navigate(route);
-  };
-
+const Header: FC<ComponentProp> = () => {
   return (
     <Box position="relative">
       <Flex
@@ -93,49 +84,12 @@ const Header: FC<ComponentProp> = ({ tokenData }) => {
             </Box>
           </Box>
 
-          <Button
-            rightIcon={<Image src={images.swap} />}
-            alignSelf="flex-start"
-            px="6"
-            onClick={() => handleNavigation(routes.main.swap)}
-          >
-            Swap Now
+          <Button rightIcon={<Image src={images.swap} />} alignSelf="flex-start" px="6">
+            <Link to={routes.main.dashboard} target="_blank">
+              Get Wallet
+            </Link>
           </Button>
         </Flex>
-
-        <Card borderRadius="3xl" w={{ base: '100%', md: '500px' }}>
-          <Stack spacing="3">
-            <Flex flexDir={{ base: 'column-reverse', md: 'row' }} justifyContent="space-between" alignItems="center">
-              <Text fontSize="xl">Swap</Text>
-              <Logo />
-            </Flex>
-
-            <Divider />
-
-            {/* <SwapForm /> */}
-
-            <HStack>
-              <Divider />
-
-              <Text variant="status" fontSize="xl">
-                Or
-              </Text>
-
-              <Divider />
-            </HStack>
-
-            <Text variant="status" fontSize="xl" textAlign="center">
-              Already have an account?{' '}
-              <Link to={routes.auth.signIn}>
-                <Text as="span" textDecor="underline" fontWeight="semibold">
-                  Login
-                </Text>
-              </Link>
-            </Text>
-          </Stack>
-        </Card>
-
-        <TokenInfo tokenData={tokenData} />
       </Flex>
     </Box>
   );

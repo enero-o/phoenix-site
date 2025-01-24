@@ -5,7 +5,6 @@ import { MenuIcon, X } from 'lucide-react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 import routes from '@phx/routes';
-import { userVar } from '@phx/utils/storage';
 
 import Logo from './logo';
 
@@ -28,13 +27,10 @@ interface ComponentProps {
 const Navbar: FC<ComponentProps> = ({ isAuth }) => {
   const [open, setOpen] = useState<boolean>(false);
 
-  const user = userVar();
   const location = useLocation();
   const navigate = useNavigate();
 
   const { pathname } = location;
-
-  const hasUserLoggedIn = !!user?.jwtToken;
 
   const handleNavigation = (route: string) => {
     navigate(route);
@@ -80,30 +76,20 @@ const Navbar: FC<ComponentProps> = ({ isAuth }) => {
         ))}
       </HStack>
 
-      {!hasUserLoggedIn && (
-        <HStack spacing="4" display={isAuth ? 'none' : 'flex'}>
-          <Button variant="outline" onClick={() => handleNavigation(routes.auth.signIn)}>
-            Login
-          </Button>
+      <HStack spacing="4" display={isAuth ? 'none' : 'flex'}>
+        <Button variant="outline" onClick={() => handleNavigation(routes.auth.signIn)}>
+          Login
+        </Button>
 
-          <Button
-            display={{ base: 'none', lg: 'inline-flex' }}
-            borderRadius="full"
-            onClick={() => handleNavigation(routes.auth.signUp)}
-            py="0"
-          >
-            Create Account
-          </Button>
-        </HStack>
-      )}
-
-      {hasUserLoggedIn && !isAuth && (
-        <HStack>
-          <Button variant="outline" onClick={() => handleNavigation(routes.main.dashboard)}>
-            View App
-          </Button>
-        </HStack>
-      )}
+        <Button
+          display={{ base: 'none', lg: 'inline-flex' }}
+          borderRadius="full"
+          onClick={() => handleNavigation(routes.auth.signUp)}
+          py="0"
+        >
+          Create Account
+        </Button>
+      </HStack>
 
       <Box cursor="pointer" display={isAuth ? 'none' : { base: 'block', lg: 'none' }} onClick={() => setOpen(!open)}>
         {open ? <X /> : <MenuIcon />}

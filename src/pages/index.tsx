@@ -45,7 +45,9 @@ const Landing = () => {
 
       <Header tokenData={transformFilteredCurrency} />
 
-      <Testimonials />
+      {/**
+       * <Testimonials />
+       */}
 
       <HowItWorks />
 

@@ -1,7 +1,7 @@
 import type { CodegenConfig } from '@graphql-codegen/cli';
 
 const config: CodegenConfig = {
-  schema: 'https://api.phoenixcap.io/',
+  schema: 'https://api.lytewallet.io/',
   documents: ['src/**/**/*.ts'],
   generates: {
     './src/types/': {

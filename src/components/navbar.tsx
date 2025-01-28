@@ -78,18 +78,11 @@ const Navbar: FC<ComponentProps> = ({ isAuth }) => {
 
       <HStack spacing="4" display={isAuth ? 'none' : 'flex'}>
         <Link href={routes.auth.signIn} target="_blank">
-          <Button variant="outline" onClick={() => handleNavigation(routes.auth.signIn)}>
-            Login
-          </Button>
+          <Button variant="outline">Login</Button>
         </Link>
 
         <Link href={routes.auth.signUp} target="_blank">
-          <Button
-            display={{ base: 'none', lg: 'inline-flex' }}
-            borderRadius="full"
-            onClick={() => handleNavigation(routes.auth.signUp)}
-            py="0"
-          >
+          <Button display={{ base: 'none', lg: 'inline-flex' }} borderRadius="full" py="0">
             Create Account
           </Button>
         </Link>

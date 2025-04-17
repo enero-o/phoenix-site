@@ -1,12 +1,11 @@
 import { type FC, useState } from 'react';
 
-import { Box, Button, Flex, HStack, Link, Text } from '@chakra-ui/react';
+import { Box, Button, Flex, HStack, Image, Link, Text } from '@chakra-ui/react';
 import { MenuIcon, X } from 'lucide-react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
+import images from '@phx/images';
 import routes from '@phx/routes';
-
-import Logo from './logo';
 
 interface NavItems {
   name: string;
@@ -52,7 +51,7 @@ const Navbar: FC<ComponentProps> = ({ isAuth }) => {
       h="4.5rem"
     >
       <Link href="/">
-        <Logo color="black" />
+        <Image src={images.logo} alt="lyte" h={{ base: '12', md: '14' }} w="auto" />
       </Link>
 
       <HStack
@@ -65,11 +64,11 @@ const Navbar: FC<ComponentProps> = ({ isAuth }) => {
         {navItems.map((item) => (
           <Link
             fontWeight={pathname === item.href ? 'bold' : '500'}
-            _hover={{ textDecoration: 'none', color: 'blue.400' }}
+            _hover={{ textDecoration: 'none', color: 'purple.200' }}
             key={item.name}
             href={item.href}
-            color={pathname === item.href ? 'blue.400' : 'gray.500'}
-            _activeLink={{ color: 'blue.400' }}
+            color={pathname === item.href ? 'purple.200' : 'gray.500'}
+            _activeLink={{ color: 'purple.200' }}
           >
             {item.name}
           </Link>

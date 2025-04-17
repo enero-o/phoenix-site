@@ -15,7 +15,7 @@ const AuthFormHeader: FC<ComponentProp> = ({ heading, text }) => {
       </Text>
 
       <Text variant="grey">
-        {text ? text : 'Get a Phoenix (PHX) wallet to accept all tokens and withdraw your preferred cash'}
+        {text ? text : 'Get a Lyte Wallet to accept all tokens and withdraw your preferred cash'}
       </Text>
     </Stack>
   );

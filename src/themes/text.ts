@@ -111,7 +111,7 @@ export const textTheme = defineStyleConfig({
       fontWeight: 'semibold',
     },
     blue: {
-      color: 'blue.400',
+      color: 'purple.200',
       fontSize: 'xs',
       fontWeight: 'semibold',
       letterSpacing: '1px',

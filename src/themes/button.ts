@@ -83,7 +83,7 @@ const darkOutline = defineStyle({
 const solid = defineStyle({
   rounded: '30',
   color: 'white.100',
-  bgColor: 'blue.400',
+  bgColor: 'purple.200',
   fontWeight: 'medium',
   fontSize: 'md',
   py: '6',

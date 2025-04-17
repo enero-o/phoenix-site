@@ -3,7 +3,7 @@ import { Box } from '@chakra-ui/react';
 import Navbar from '@phx/components/navbar';
 import { useCurrencyRate } from '@phx/hooks/currencies';
 
-import AboutPhoenix from './components/aboutPhoenix';
+import About from './components/about';
 import Faq from './components/faq';
 import Footer from './components/footer';
 import FooterSwap from './components/footerSwap';
@@ -45,15 +45,13 @@ const Landing = () => {
 
       <Header tokenData={transformFilteredCurrency} />
 
-      {/**
-       * <Testimonials />
-       */}
-
       <HowItWorks />
+
+      <Testimonials />
 
       <MarketUpdate tokenData={transformFilteredCurrency} filteredData={filteredCurrencyRate} />
 
-      <AboutPhoenix />
+      <About />
 
       <Faq />
 

@@ -59,7 +59,7 @@ export default Faq;
 
 const faqInfo = [
   {
-    title: 'What is phoenix?',
+    title: 'What is Lyte?',
     content:
       'Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aute irure dolor',
   },

@@ -1,6 +1,5 @@
 import { Box, Flex, HStack, Image, Text } from '@chakra-ui/react';
 
-import Logo from '@phx/components/logo';
 import images from '@phx/images';
 
 const Footer = () => {
@@ -9,10 +8,6 @@ const Footer = () => {
   const currencies = ['USD', 'GBP', 'EUR', 'NGN', 'YEN'];
   return (
     <Box bgColor="black" as="footer" py="14" px={{ base: '5', md: '10', lg: '20' }}>
-      <Box pl={{ base: '3', md: '7' }}>
-        <Logo color="white" />
-      </Box>
-
       <Flex
         flexDir={{ base: 'row', lg: 'row' }}
         pl={{ base: '5', md: '20', xl: '60' }}

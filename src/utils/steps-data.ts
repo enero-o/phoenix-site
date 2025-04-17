@@ -9,7 +9,7 @@ export const statusStep = [
   { title: '15th Monday', description: 'Transfer initiated, swapping commenced' },
   {
     title: 'Waiting for payment confirmation',
-    description: 'Phoenix is waiting to receive your transfer. once received phoenix will initiate payment',
+    description: 'Lyte is waiting to receive your transfer. once received Lyte will initiate payment',
   },
   { title: 'Payment initiated', description: 'We have received your transfer and initiated swapping' },
   {

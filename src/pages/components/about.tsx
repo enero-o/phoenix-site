@@ -2,7 +2,7 @@ import { Box, Button, Flex, HStack, Image, Stack, Text } from '@chakra-ui/react'
 
 import images from '@phx/images';
 
-const AboutPhoenix = () => {
+const About = () => {
   return (
     <Box
       py="6"
@@ -72,7 +72,7 @@ const AboutPhoenix = () => {
 
             <Box pr={{ base: '5', md: '12', lg: '32' }}>
               <Text textAlign="justify">
-                At Phoenix Finance, we understand that emergencies require quick and dependable solutions. That's why
+                At Lyte, we understand that emergencies require quick and dependable solutions. That's why
                 we've developed a platform that allows you to seamlessly swap Euros, Pounds, and USD to Naira, ensuring
                 you have the funds you need when you need them most.
               </Text>
@@ -91,4 +91,4 @@ const AboutPhoenix = () => {
   );
 };
 
-export default AboutPhoenix;
+export default About;

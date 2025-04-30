@@ -3,8 +3,8 @@ import type { FC } from 'react';
 import { Badge, Box, Button, Stack, Table, TableContainer, Tbody, Td, Text, Th, Thead, Tr } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 
-import useTokenIcon from '@phx/hooks/useTokenIcon';
-import { currencyFormatter } from '@phx/utils';
+import useTokenIcon from '@lyte/hooks/useTokenIcon';
+import { currencyFormatter } from '@lyte/utils';
 
 import CryptoSparkline from './cryptoSparkline';
 import CustomNameTd from './customNameTd';

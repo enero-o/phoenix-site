@@ -1,10 +1,9 @@
 import { type FC, useState } from 'react';
 
-import { Box, Button, Flex, HStack, Image, Link, Text } from '@chakra-ui/react';
-import { MenuIcon, X } from 'lucide-react';
+import { Button, Flex, HStack, Image, Link } from '@chakra-ui/react';
 
-import images from '@phx/images';
-import routes from '@phx/routes';
+import images from '@lyte/images';
+import routes from '@lyte/routes';
 
 interface NavItems {
   name: string;
@@ -67,7 +66,7 @@ const Navbar: FC<ComponentProps> = ({ isAuth }) => {
 
       <HStack spacing="4" display={isAuth ? 'none' : 'flex'}>
         <Link href={routes.auth.signIn} target="_blank">
-          <Button variant="outline">Login</Button>
+          <Button variant="outline">View App</Button>
         </Link>
 
         <Link href={routes.auth.signUp} target="_blank">
@@ -77,7 +76,7 @@ const Navbar: FC<ComponentProps> = ({ isAuth }) => {
         </Link>
       </HStack>
 
-      <Box cursor="pointer" display={isAuth ? 'none' : { base: 'block', lg: 'none' }} onClick={() => setOpen(!open)}>
+      {/* <Box cursor="pointer" display={isAuth ? 'none' : { base: 'block', lg: 'none' }} onClick={() => setOpen(!open)}>
         {open ? <X /> : <MenuIcon />}
       </Box>
 
@@ -103,7 +102,7 @@ const Navbar: FC<ComponentProps> = ({ isAuth }) => {
             <Text fontSize="lg">Create Account</Text>
           </Link>
         </Box>
-      )}
+      )} */}
     </Flex>
   );
 };

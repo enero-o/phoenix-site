@@ -3,10 +3,9 @@ import type { FC } from 'react';
 import { Box, Button, Card, Divider, Flex, HStack, Image, Stack, Text } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 
-import Logo from '@phx/components/logo';
-import images from '@phx/images';
-import SwapForm from '@phx/partials/swapForm';
-import routes from '@phx/routes';
+import images from '@lyte/images';
+import SwapForm from '@lyte/partials/swapForm';
+import routes from '@lyte/routes';
 
 const Header: FC = () => {
   return (
@@ -83,20 +82,13 @@ const Header: FC = () => {
 
           <Button rightIcon={<Image src={images.swap} />} alignSelf="flex-start" px="6">
             <Link to={routes.main.dashboard} target="_blank">
-              Start Now
+              Swap Now
             </Link>
           </Button>
         </Flex>
 
         <Card borderRadius="3xl" w={{ base: '100%', md: '500px' }}>
           <Stack spacing="3">
-            <Flex flexDir={{ base: 'column-reverse', md: 'row' }} justifyContent="space-between" alignItems="center">
-              <Text fontSize="xl">Swap</Text>
-              <Logo />
-            </Flex>
-
-            <Divider />
-
             <SwapForm />
 
             <HStack>

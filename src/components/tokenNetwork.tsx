@@ -2,7 +2,7 @@ import type { FC } from 'react';
 
 import { Avatar } from '@chakra-ui/react';
 
-import useTokenIcon from '@phx/hooks/useTokenIcon';
+import useTokenIcon from '@lyte/hooks/useTokenIcon';
 
 interface ComponentProps {
   currency: string;

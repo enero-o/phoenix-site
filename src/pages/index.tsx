@@ -1,11 +1,10 @@
 import { Box } from '@chakra-ui/react';
 
-import Navbar from '@phx/components/navbar';
-import { useCurrencyRate } from '@phx/hooks/currencies';
+import { useCurrencyRate } from '@lyte/hooks/currencies';
 
-import Footer from './components/footer';
-import Header from './components/header';
-import HowItWorks from './components/howItWorks';
+import Footer from '../partials/footer';
+import Header from '../partials/header';
+import HowItWorks from '../partials/howItWorks';
 
 const Landing = () => {
   const { data } = useCurrencyRate();
@@ -36,8 +35,6 @@ const Landing = () => {
 
   return (
     <Box>
-      <Navbar />
-
       <Header />
 
       <HowItWorks />

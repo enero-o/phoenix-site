@@ -105,7 +105,7 @@ export default [
               position: 'before',
             },
             {
-              pattern: '@phx/**/**',
+              pattern: '@lyte/**/**',
               group: 'internal',
               position: 'after',
             },

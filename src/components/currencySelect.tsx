@@ -13,10 +13,10 @@ import {
   useDisclosure,
 } from '@chakra-ui/react';
 
-import useTokenIcon from '@phx/hooks/useTokenIcon';
-import images from '@phx/images';
-import CurrencyModalContent from '@phx/partials/currencyModal';
-import type { GetCurrency } from '@phx/types/type';
+import useTokenIcon from '@lyte/hooks/useTokenIcon';
+import images from '@lyte/images';
+import CurrencyModalContent from '@lyte/partials/currencyModal';
+import type { GetCurrency } from '@lyte/types/type';
 
 interface ComponentProps {
   filteredCrypto: GetCurrency[];

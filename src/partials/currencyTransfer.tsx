@@ -2,10 +2,10 @@ import type { FC } from 'react';
 
 import { Flex, Image, Text } from '@chakra-ui/react';
 
-import useTokenIcon from '@phx/hooks/useTokenIcon';
-import images from '@phx/images';
+import useTokenIcon from '@lyte/hooks/useTokenIcon';
+import images from '@lyte/images';
 
-import ArrowGif from './arrowGif';
+import ArrowGif from '../components/arrowGif';
 
 interface ComponentProps {
   base?: string;

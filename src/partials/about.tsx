@@ -1,6 +1,6 @@
 import { Box, Button, Flex, HStack, Image, Stack, Text } from '@chakra-ui/react';
 
-import images from '@phx/images';
+import images from '@lyte/images';
 
 const About = () => {
   return (

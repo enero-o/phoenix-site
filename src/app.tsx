@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { GlobalStyles } from './globalStyles.tsx';
 import './index.css';
 import { ApolloWrapper } from './gql/provider.tsx';
+import MainLayout from './layouts/main.tsx';
 import Landing from './pages';
 import { theme } from './themes/index.ts';
 
@@ -14,7 +15,9 @@ function App() {
         <GlobalStyles />
         <BrowserRouter>
           <Routes>
-            <Route path="" element={<Landing />} />
+            <Route element={<MainLayout />}>
+              <Route path="" element={<Landing />} />
+            </Route>
           </Routes>
         </BrowserRouter>
       </ChakraProvider>

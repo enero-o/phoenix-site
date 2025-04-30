@@ -2,7 +2,7 @@ import type { FC } from 'react';
 
 import { Button, Image } from '@chakra-ui/react';
 
-import images from '@phx/images';
+import images from '@lyte/images';
 
 interface Prop {
   onClick: () => void;

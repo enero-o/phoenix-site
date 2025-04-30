@@ -1,18 +1,19 @@
 import { Box, Flex } from '@chakra-ui/react';
 import { Outlet } from 'react-router-dom';
 
-// import MainNavbar from '@phx/components/mainNavbar';
+import Navbar from '@lyte/partials/navbar';
 
 const MainLayout = () => {
   return (
     <Box h="100vh" position="relative" bg="blue.100">
-      {/* <MainNavbar /> */}
+      <Navbar />
+
       <Flex
-        flexDir= 'column'
+        flexDir="column"
         alignItems="center"
-        justify='start'
+        justify="start"
         px="4"
-        pt={{ base: "2.5rem", md: "4.5rem"}}
+        pt={{ base: '2.5rem', md: '4.5rem' }}
         rowGap="10"
         h="calc(100vh - 4.5rem)"
         bg="blue.100"

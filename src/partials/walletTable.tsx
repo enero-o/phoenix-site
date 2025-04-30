@@ -2,8 +2,8 @@ import { type FC } from 'react';
 
 import { Stack, Table, TableContainer, Tbody, Th, Thead, Tr } from '@chakra-ui/react';
 
-import useTokenIcon from '@phx/hooks/useTokenIcon';
-import { currencyFormatter } from '@phx/utils';
+import useTokenIcon from '@lyte/hooks/useTokenIcon';
+import { currencyFormatter } from '@lyte/utils';
 
 import CustomNameTd from './customNameTd';
 import TdCustom from './tdCustom';

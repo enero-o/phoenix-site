@@ -12,11 +12,11 @@ import {
 } from '@chakra-ui/react';
 import { Field } from 'formik';
 
-import images from '@phx/images';
-import CurrencyModalContent from '@phx/partials/currencyModal';
-import TokenNetwork from '@phx/partials/tokenNetwork';
-import type { GetCurrency } from '@phx/types/type';
-import { getLimits, truncateValue } from '@phx/utils';
+import TokenNetwork from '@lyte/components/tokenNetwork';
+import images from '@lyte/images';
+import CurrencyModalContent from '@lyte/partials/currencyModal';
+import type { GetCurrency } from '@lyte/types/type';
+import { getLimits, truncateValue } from '@lyte/utils';
 
 import { getTokenName } from '../hooks/useTokenIcon';
 

@@ -3,8 +3,8 @@ import type { FC } from 'react';
 import { Box, Button, HStack, Image, ModalBody, ModalContent, ModalHeader, Stack, Text } from '@chakra-ui/react';
 import { Form, Formik } from 'formik';
 
-import { Input } from '@phx/components';
-import images from '@phx/images';
+import { Input } from '@lyte/components';
+import images from '@lyte/images';
 
 interface ComponentProps {
   onCancel: () => void;

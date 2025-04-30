@@ -1,6 +1,6 @@
 import { Box, Card, Flex, Image, Stack, Text } from '@chakra-ui/react';
 
-import images from '@phx/images';
+import images from '@lyte/images';
 
 const HowItWorks = () => {
   return (
@@ -29,14 +29,14 @@ const HowItWorks = () => {
 
         <Flex flexDir={{ base: 'column', md: 'row' }} gap="10" mx={{ base: '5', md: '10' }}>
           {howData.map((item, index) => (
-            <Stack key={index} spacing="5" w="xs" p="4">
+            <Stack key={index} spacing="5" w="xs" p={{ base: 0, md: 4 }}>
               <Image src={item.logo} w={20} h={20} />
               <Box>
                 <Text variant="subHeading" textAlign="start">
                   {item.title}
                 </Text>
 
-                <Text variant="status" fontSize="sm" noOfLines={3}>
+                <Text variant="status" fontSize="md" noOfLines={3}>
                   {item.description}
                 </Text>
               </Box>

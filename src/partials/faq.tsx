@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import { Box, Button, Card, HStack, Image, SimpleGrid, Stack, Text } from '@chakra-ui/react';
 
-import images from '@phx/images';
+import images from '@lyte/images';
 
 const Faq = () => {
   const [isToggleArray, setIsToggleArray] = useState(Array(faqInfo.length).fill(false));

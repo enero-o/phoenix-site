@@ -1,6 +1,6 @@
 import { HStack, Image, Text } from '@chakra-ui/react';
 
-import images from '@phx/images';
+import images from '@lyte/images';
 
 const InputRightElement = () => {
   return (

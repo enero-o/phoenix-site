@@ -1,7 +1,7 @@
 import { Box, Text } from '@chakra-ui/react';
 
-import Carousel from '@phx/components/carousel';
-import TestimonialCard from '@phx/components/testimonialCard';
+import Carousel from '@lyte/components/carousel';
+import TestimonialCard from '@lyte/components/testimonialCard';
 
 const comments = [
   {

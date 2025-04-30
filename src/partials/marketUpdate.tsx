@@ -3,8 +3,8 @@ import type { FC } from 'react';
 
 import { Stack, Text, useMediaQuery } from '@chakra-ui/react';
 
-import CryptoTable from '@phx/partials/cryptoTable';
-import TokenCard from '@phx/partials/tokenCard';
+import CryptoTable from '@lyte/partials/cryptoTable';
+import TokenCard from '@lyte/partials/tokenCard';
 
 interface ComponentProp {
   tokenData: Token[];

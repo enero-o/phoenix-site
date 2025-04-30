@@ -25,7 +25,7 @@
     "moduleDetection": "force",
     "noUncheckedIndexedAccess": true,
     "paths": {
-      "@phx/*": ["./src/*"]
+      "@lyte/*": ["./src/*"]
     },
     "useUnknownInCatchVariables": true,
     "verbatimModuleSyntax": true,

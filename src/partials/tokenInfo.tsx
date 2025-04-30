@@ -2,10 +2,10 @@ import type { FC } from 'react';
 
 import { Badge, Box, Card, Divider, Flex, HStack, Image, Stack, Text } from '@chakra-ui/react';
 
-import useTokenIcon from '@phx/hooks/useTokenIcon';
-import images from '@phx/images';
-import CryptoSparkline from '@phx/partials/cryptoSparkline';
-import { currencyFormatter } from '@phx/utils';
+import useTokenIcon from '@lyte/hooks/useTokenIcon';
+import images from '@lyte/images';
+import CryptoSparkline from '@lyte/partials/cryptoSparkline';
+import { currencyFormatter } from '@lyte/utils';
 
 interface ComponentProp {
   // eslint-disable-next-line no-undef

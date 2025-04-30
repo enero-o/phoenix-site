@@ -4,15 +4,15 @@ import { Box, Button, Divider, Flex, HStack, Image, Text, VStack, useDisclosure 
 import { Form, Formik } from 'formik';
 import { useSearchParams } from 'react-router-dom';
 
-import { NumberInput } from '@phx/components';
-import { useQuote } from '@phx/hooks/currencies';
-import { getTokenName } from '@phx/hooks/useTokenIcon';
-import images from '@phx/images';
-import ProviderInfo from '@phx/partials/providerInfo';
-import { currencyFormatter, truncateValue } from '@phx/utils';
-import { validationSchema } from '@phx/utils/validator';
+import { NumberInput } from '@lyte/components';
+import { useQuote } from '@lyte/hooks/currencies';
+import { getTokenName } from '@lyte/hooks/useTokenIcon';
+import images from '@lyte/images';
+import ProviderInfo from '@lyte/partials/providerInfo';
+import { currencyFormatter, truncateValue } from '@lyte/utils';
+import { validationSchema } from '@lyte/utils/validator';
 
-import CircularTimer from './circularTimer';
+import CircularTimer from '../components/circularTimer';
 
 const SwapForm = () => {
   const [amount, setAmount] = useState('');

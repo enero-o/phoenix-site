@@ -35,7 +35,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@phx': fileURLToPath(new URL('./src', import.meta.url)),
+      '@lyte': fileURLToPath(new URL('./src', import.meta.url)),
       buffer: 'buffer', // Ensure buffer alias is present
     },
   },

@@ -1,6 +1,6 @@
 import { Coin } from 'coin-format';
 
-import { getTokenName } from '@phx/hooks/useTokenIcon';
+import { getTokenName } from '@lyte/hooks/useTokenIcon';
 
 type Unpacked<T> = T extends (infer U)[]
   ? U

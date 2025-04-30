@@ -1,6 +1,6 @@
 import { Box, HStack, Stack, Text } from '@chakra-ui/react';
 
-import { currencyFormatter } from '@phx/utils';
+import { currencyFormatter } from '@lyte/utils';
 
 const ProviderInfo = ({ currency, fee }) => {
   return (

@@ -2,8 +2,8 @@ import type { FC } from 'react';
 
 import { Button, HStack, Image, Text } from '@chakra-ui/react';
 
-import useTokenIcon from '@phx/hooks/useTokenIcon';
-import ArrowDownIcon from '@phx/icons/arrowDown';
+import useTokenIcon from '@lyte/hooks/useTokenIcon';
+import ArrowDownIcon from '@lyte/icons/arrowDown';
 
 interface ComponentProps {
   onClick: () => void;

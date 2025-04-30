@@ -1,7 +1,7 @@
 import { useQuery } from '@apollo/client';
 
-import { GET_CURRENCIES, GET_CURRENCY_RATE, GET_QUOTE } from '@phx/gql/queries/currency';
-import type { CurrencyData } from '@phx/types/type';
+import { GET_CURRENCIES, GET_CURRENCY_RATE, GET_QUOTE } from '@lyte/gql/queries/currency';
+import type { CurrencyData } from '@lyte/types/type';
 
 export const useCurrencies = () => {
   return useQuery<CurrencyData>(GET_CURRENCIES);

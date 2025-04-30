@@ -13,7 +13,7 @@ import {
   Stepper,
 } from '@chakra-ui/react';
 
-import type { StepData } from '@phx/types/type';
+import type { StepData } from '@lyte/types/type';
 
 interface ComponentProps {
   activeStep: number;

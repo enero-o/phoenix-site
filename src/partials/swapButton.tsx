@@ -2,7 +2,7 @@ import { type FC, type ReactNode } from 'react';
 
 import { Button, Flex, HStack, Text } from '@chakra-ui/react';
 
-import CashIcon from '@phx/icons/cashIcon';
+import CashIcon from '@lyte/icons/cashIcon';
 
 interface ComponentProps {
   buttonText: string;

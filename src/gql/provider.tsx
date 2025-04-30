@@ -3,8 +3,8 @@ import type { PropsWithChildren } from 'react';
 import { ApolloClient, ApolloProvider, InMemoryCache, createHttpLink, from } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
-import config from '@phx/config';
-import { userVar } from '@phx/utils/storage';
+import config from '@lyte/config';
+import { userVar } from '@lyte/utils/storage';
 
 import { errorLink } from './errorLink';
 

@@ -2,8 +2,8 @@ import type { FC } from 'react';
 
 import { Box, Card, Divider, HStack, Image, Stack, Text } from '@chakra-ui/react';
 
-import useTokenIcon from '@phx/hooks/useTokenIcon';
-import { formatLargeNumber } from '@phx/utils';
+import useTokenIcon from '@lyte/hooks/useTokenIcon';
+import { formatLargeNumber } from '@lyte/utils';
 
 interface ComponentProps {
   name: string;

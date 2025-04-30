@@ -1,6 +1,6 @@
 import { Box, HStack, Image } from '@chakra-ui/react';
 
-import images from '@phx/images';
+import images from '@lyte/images';
 
 const ArrowGif = () => {
   return (

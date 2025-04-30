@@ -2,7 +2,7 @@ import type { FC } from 'react';
 
 import { IconButton, Image, Input, InputGroup, InputLeftElement } from '@chakra-ui/react';
 
-import images from '@phx/images';
+import images from '@lyte/images';
 
 interface ComponentProps {
   placeholder: string;

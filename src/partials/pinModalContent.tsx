@@ -14,8 +14,8 @@ import {
 } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 
-import { PinInput } from '@phx/components';
-import images from '@phx/images';
+import { PinInput } from '@lyte/components';
+import images from '@lyte/images';
 
 import type { FormikValues } from 'formik';
 

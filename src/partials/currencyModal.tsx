@@ -17,11 +17,11 @@ import {
 } from '@chakra-ui/react';
 import { CheckCircleIcon } from 'lucide-react';
 
-import SearchInput from '@phx/components/searchFilter';
-import useTokenIcon from '@phx/hooks/useTokenIcon';
-import type { Wallet } from '@phx/types/graphql';
-import type { GetCurrency } from '@phx/types/type';
-import { currencyFormatter, searchFilter } from '@phx/utils';
+import SearchInput from '@lyte/components/searchFilter';
+import useTokenIcon from '@lyte/hooks/useTokenIcon';
+import type { Wallet } from '@lyte/types/graphql';
+import type { GetCurrency } from '@lyte/types/type';
+import { currencyFormatter, searchFilter } from '@lyte/utils';
 
 interface ComponentProps {
   data: Wallet[];

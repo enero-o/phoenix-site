@@ -1,4 +1,4 @@
-import images from '@phx/images';
+import images from '@lyte/images';
 
 const loaded_data: Record<string, string> = {
   /** Default icons. */

@@ -2,10 +2,10 @@ import { useCallback, useEffect } from 'react';
 
 import { CircularProgress, HStack, Image, Text } from '@chakra-ui/react';
 
-import { useCountdown } from '@phx/hooks/useCountdown';
-import { getTokenName } from '@phx/hooks/useTokenIcon';
-import images from '@phx/images';
-import { truncateValue } from '@phx/utils';
+import { useCountdown } from '@lyte/hooks/useCountdown';
+import { getTokenName } from '@lyte/hooks/useTokenIcon';
+import images from '@lyte/images';
+import { truncateValue } from '@lyte/utils';
 
 const CircularTimer = ({ quote, refetch, baseCurrency, quoteCurrency }) => {
   const refetchMemoized = useCallback(() => {

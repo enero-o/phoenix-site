@@ -16,7 +16,7 @@ const TokenInfo: FC<ComponentProp> = ({ tokenData }) => {
   const tokenIcon = useTokenIcon();
 
   return (
-    <Box width="100%" position={{ md: 'absolute' }} right="2px" bottom="-32">
+    <Box width="100%" right="2px">
       <Flex
         flexDir={{ base: 'column', md: 'row' }}
         bg="white.100"

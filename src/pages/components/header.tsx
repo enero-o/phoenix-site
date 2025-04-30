@@ -1,17 +1,14 @@
 import type { FC } from 'react';
 
-import { Box, Button, Flex, HStack, Image, Text } from '@chakra-ui/react';
+import { Box, Button, Card, Divider, Flex, HStack, Image, Stack, Text } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 
+import Logo from '@phx/components/logo';
 import images from '@phx/images';
+import SwapForm from '@phx/partials/swapForm';
 import routes from '@phx/routes';
 
-interface ComponentProp {
-  // eslint-disable-next-line no-undef
-  tokenData: Token[];
-}
-
-const Header: FC<ComponentProp> = () => {
+const Header: FC = () => {
   return (
     <Box position="relative">
       <Flex
@@ -69,7 +66,7 @@ const Header: FC<ComponentProp> = () => {
                         left: '0',
                       }}
                     >
-                      3 Minutes
+                      10 Seconds
                     </Text>
                   </Box>
                 </Box>
@@ -90,6 +87,40 @@ const Header: FC<ComponentProp> = () => {
             </Link>
           </Button>
         </Flex>
+
+        <Card borderRadius="3xl" w={{ base: '100%', md: '500px' }}>
+          <Stack spacing="3">
+            <Flex flexDir={{ base: 'column-reverse', md: 'row' }} justifyContent="space-between" alignItems="center">
+              <Text fontSize="xl">Swap</Text>
+              <Logo />
+            </Flex>
+
+            <Divider />
+
+            <SwapForm />
+
+            <HStack>
+              <Divider />
+
+              <Text variant="status" fontSize="xl">
+                Or
+              </Text>
+
+              <Divider />
+            </HStack>
+
+            <Text variant="status" fontSize="xl" textAlign="center">
+              Already have an account?{' '}
+              <Link to={routes.auth.signIn}>
+                <Text as="span" textDecor="underline" fontWeight="semibold">
+                  Login
+                </Text>
+              </Link>
+            </Text>
+          </Stack>
+        </Card>
+
+        {/* <TokenInfo tokenData={tokenData} /> */}
       </Flex>
     </Box>
   );

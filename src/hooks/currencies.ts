@@ -8,6 +8,8 @@ export const useCurrencies = () => {
 };
 
 export const useQuote = (baseCurrency?: string, quoteCurrency?: string, amount?: string) => {
+  // toDo replace this with internal logic for data pulled
+
   return useQuery(GET_QUOTE, {
     variables: {
       query: {

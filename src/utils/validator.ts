@@ -1,4 +1,6 @@
-import { number, ref, string } from 'yup';
+import { number, object, ref, string } from 'yup';
+
+import { getLimits } from '.';
 
 export const validators = {
   swapAmount: number().required('Swap amount is required').typeError('Swap amount must be a number'),
@@ -28,4 +30,14 @@ export const validators = {
   reference: string().required('Transaction reference is required'),
   paymentType: string().required('Payment type is required'),
   walletAddress: string().required('Wallet address is required'),
+};
+
+export const validationSchema = (fieldName, symbol) => {
+  return object().shape({
+    [fieldName]: number()
+      .max(getLimits(symbol).max, `Max ${getLimits(symbol).max} ${symbol}`)
+      .min(getLimits(symbol).min, `Min ${getLimits(symbol).min} ${symbol}`)
+      .required('Amount is required')
+      .positive('Amount must be greater than zero'),
+  });
 };

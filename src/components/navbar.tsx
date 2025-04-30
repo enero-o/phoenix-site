@@ -2,7 +2,6 @@ import { type FC, useState } from 'react';
 
 import { Box, Button, Flex, HStack, Image, Link, Text } from '@chakra-ui/react';
 import { MenuIcon, X } from 'lucide-react';
-import { useLocation, useNavigate } from 'react-router-dom';
 
 import images from '@phx/images';
 import routes from '@phx/routes';
@@ -25,15 +24,6 @@ interface ComponentProps {
 
 const Navbar: FC<ComponentProps> = ({ isAuth }) => {
   const [open, setOpen] = useState<boolean>(false);
-
-  const location = useLocation();
-  const navigate = useNavigate();
-
-  const { pathname } = location;
-
-  const handleNavigation = (route: string) => {
-    navigate(route);
-  };
 
   return (
     <Flex

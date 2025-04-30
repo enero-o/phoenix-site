@@ -1,9 +1,6 @@
 import {
-  Avatar,
   Button,
-  Divider,
   FormControl,
-  FormErrorMessage,
   FormLabel,
   HStack,
   Image,
@@ -12,16 +9,16 @@ import {
   Stack,
   Text,
   VStack,
-  useDisclosure,
 } from '@chakra-ui/react';
 import { Field } from 'formik';
 
 import images from '@phx/images';
 import CurrencyModalContent from '@phx/partials/currencyModal';
+import TokenNetwork from '@phx/partials/tokenNetwork';
 import type { GetCurrency } from '@phx/types/type';
-import { currencyFormatter } from '@phx/utils';
+import { getLimits, truncateValue } from '@phx/utils';
 
-import useTokenIcon from '../hooks/useTokenIcon';
+import { getTokenName } from '../hooks/useTokenIcon';
 
 interface Props {
   name: string;
@@ -32,17 +29,16 @@ interface Props {
   min?: string | number;
   onClick?: () => void;
   symbol: string;
-  rate?: string;
+  rate?: any;
   balance?: number;
   arrayList: GetCurrency[];
   handleClick: (token: GetCurrency) => void;
+  modalControls: any;
+  network?: string;
 }
 
 export default function CustomNumberInput(props: Props) {
-  const { name, label, placeholder, max, min, symbol, rate, balance, arrayList, handleClick } = props;
-
-  const tokenIcon = useTokenIcon();
-  const modalControls = useDisclosure();
+  const { name, label, placeholder, network, symbol, rate, balance, arrayList, modalControls, handleClick } = props;
 
   return (
     <Field name={name}>
@@ -63,7 +59,7 @@ export default function CustomNumberInput(props: Props) {
                 {balance && (
                   <HStack spacing="1.5" justifyContent="flex-end">
                     <Image src={images.tokenSwap} />
-                    <Text variant="label">{balance}</Text>
+                    <Text variant="label">{truncateValue(balance, symbol)}</Text>
 
                     {balance > 0 && (
                       <Button
@@ -95,7 +91,7 @@ export default function CustomNumberInput(props: Props) {
                 <Button
                   variant="bluish"
                   fontWeight="semibold"
-                  onClick={modalControls.onOpen}
+                  onClick={modalControls?.onOpen}
                   px="0"
                   fontSize={{ base: 'sm' }}
                   color="brand.200"
@@ -103,13 +99,13 @@ export default function CustomNumberInput(props: Props) {
                   alignItems="center"
                   justifyContent="space-between"
                 >
-                  <HStack spacing="1" alignItems="center">
-                    <Avatar src={tokenIcon(symbol)} w={{ base: 6, md: 10 }} h={{ base: 6, md: 10 }} />
+                  <HStack spacing="3" alignItems="center">
+                    <TokenNetwork currency={symbol} network={network} />
 
                     <Text fontSize={{ base: 'lg', md: '2xl' }} fontWeight="semibold" color="brand.100">
-                      {symbol || '--'}
+                      {getTokenName(symbol) || '--'}
                     </Text>
-                    
+
                     <Image src={images.rightIcon} />
                   </HStack>
                 </Button>
@@ -136,8 +132,8 @@ export default function CustomNumberInput(props: Props) {
                   <NumberInputField
                     {...field}
                     // pattern=".*"
-                    max={max}
-                    min={min}
+                    max={getLimits(symbol).max}
+                    min={getLimits(symbol).min}
                     placeholder={placeholder}
                     onKeyDown={(e) => {
                       e.key === 'Enter' && e.preventDefault();
@@ -161,19 +157,8 @@ export default function CustomNumberInput(props: Props) {
               </VStack>
             </HStack>
 
-            <Stack>
-              <Divider />
-
-              <HStack>
-                <Text variant="label">
-                  {field.value} {symbol} ~~ {currencyFormatter.format(Number(rate) * field.value || 0)}
-                </Text>
-                <Image src={images.tDesignSwap} />
-              </HStack>
-            </Stack>
+            <Stack>{rate}</Stack>
           </Stack>
-
-          {form.touched[name] && <FormErrorMessage>{form.errors[name]}</FormErrorMessage>}
         </FormControl>
       )}
     </Field>

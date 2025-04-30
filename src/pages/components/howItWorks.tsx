@@ -52,7 +52,7 @@ export default HowItWorks;
 
 const howData = [
   {
-    title: 'Wallet',
+    title: 'Deposit',
     logo: images.selectToken,
     description: 'Lyte generates wallets ETH and TRON wallets for you on, using our MPC wallet technology',
   },

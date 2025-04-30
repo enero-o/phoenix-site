@@ -86,7 +86,7 @@ const Header: FC<ComponentProp> = () => {
 
           <Button rightIcon={<Image src={images.swap} />} alignSelf="flex-start" px="6">
             <Link to={routes.main.dashboard} target="_blank">
-              Get Wallet
+              Start Now
             </Link>
           </Button>
         </Flex>

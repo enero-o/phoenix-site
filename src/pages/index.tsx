@@ -47,15 +47,15 @@ const Landing = () => {
 
       <HowItWorks />
 
-      <Testimonials />
+      {/* <Testimonials /> */}
 
-      <MarketUpdate tokenData={transformFilteredCurrency} filteredData={filteredCurrencyRate} />
+      {/* <MarketUpdate tokenData={transformFilteredCurrency} filteredData={filteredCurrencyRate} /> */}
 
-      <About />
+      {/* <About /> */}
 
-      <Faq />
+      {/* <Faq /> */}
 
-      <FooterSwap />
+      {/* <FooterSwap /> */}
 
       <Footer />
     </Box>

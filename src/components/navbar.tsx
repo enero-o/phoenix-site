@@ -54,7 +54,7 @@ const Navbar: FC<ComponentProps> = ({ isAuth }) => {
         <Image src={images.logo} alt="lyte" h={{ base: '12', md: '14' }} w="auto" />
       </Link>
 
-      <HStack
+      {/* <HStack
         display={isAuth ? 'none' : { base: 'none', lg: 'flex' }}
         justifyContent="space-between"
         px="5"
@@ -73,7 +73,7 @@ const Navbar: FC<ComponentProps> = ({ isAuth }) => {
             {item.name}
           </Link>
         ))}
-      </HStack>
+      </HStack> */}
 
       <HStack spacing="4" display={isAuth ? 'none' : 'flex'}>
         <Link href={routes.auth.signIn} target="_blank">
